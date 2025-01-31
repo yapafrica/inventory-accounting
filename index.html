@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Your Knowledge - Inventory & Cost Accounting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: left;
+        }
+        #quiz-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #quiz-container h2 {
+            margin-bottom: 20px;
+        }
+        .question {
+            margin: 15px 0;
+            display: none;
+        }
+        .question input {
+            margin-right: 10px;
+        }
+        #result {
+            margin-top: 20px;
+            display: none;
+        }
+        #result p {
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            #quiz-container {
+                width: 100%;
+            }
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div id="quiz-container">
+    <h2>Test Your Knowledge - You have 10 questions!</h2>
+
+    <button id="startQuizBtn">Start Quiz</button>
+
+    <div id="questions">
+        <div class="question">
+            <p>What is the primary purpose of inventory accounting?</p>
+            <label><input type="radio" name="q1" value="a"> To track the movement of goods in and out of inventory</label><br>
+            <label><input type="radio" name="q1" value="b"> To calculate gross profit</label><br>
+            <label><input type="radio" name="q1" value="c"> To determine the cost of goods sold</label><br>
+        </div>
+
+        <div class="question">
+            <p>What is FIFO in inventory cost accounting?</p>
+            <label><input type="radio" name="q2" value="a"> First In, First Out</label><br>
+            <label><input type="radio" name="q2" value="b"> First In, Last Out</label><br>
+            <label><input type="radio" name="q2" value="c"> Last In, First Out</label><br>
+        </div>
+
+        <div class="question">
+            <p>Which of the following is true regarding LIFO (Last In, First Out) method?</p>
+            <label><input type="radio" name="q3" value="a"> The most recent inventory purchased is sold first</label><br>
+            <label><input type="radio" name="q3" value="b"> The oldest inventory purchased is sold first</label><br>
+            <label><input type="radio" name="q3" value="c"> LIFO is only used for tax purposes</label><br>
+        </div>
+
+        <div class="question">
+            <p>What does "Cost of Goods Sold" (COGS) represent in accounting?</p>
+            <label><input type="radio" name="q4" value="a"> The total cost of producing a product</label><br>
+            <label><input type="radio" name="q4" value="b"> The total cost of goods that were sold during a period</label><br>
+            <label><input type="radio" name="q4" value="c"> The total revenue from the sale of products</label><br>
+        </div>
+
+        <div class="question">
+            <p>Which of the following methods uses weighted average to determine inventory cost?</p>
+            <label><input type="radio" name="q5" value="a"> FIFO</label><br>
+            <label><input type="radio" name="q5" value="b"> LIFO</label><br>
+            <label><input type="radio" name="q5" value="c"> Weighted Average Cost</label><br>
+        </div>
+
+        <div class="question">
+            <p>What is the purpose of a periodic inventory system?</p>
+            <label><input type="radio" name="q6" value="a"> To continuously track inventory levels in real-time</label><br>
+            <label><input type="radio" name="q6" value="b"> To update inventory levels at the end of each accounting period</label><br>
+            <label><input type="radio" name="q6" value="c"> To eliminate the need for inventory reconciliation</label><br>
+        </div>
+
+        <div class="question">
+            <p>In cost accounting, fixed costs are:</p>
+            <label><input type="radio" name="q7" value="a"> Costs that vary with production levels</label><br>
+            <label><input type="radio" name="q7" value="b"> Costs that do not change with production levels</label><br>
+            <label><input type="radio" name="q7" value="c"> Only incurred at the beginning of a production run</label><br>
+        </div>
+
+        <div class="question">
+            <p>What is a "stock-out" in inventory management?</p>
+            <label><input type="radio" name="q8" value="a"> A situation where inventory exceeds demand</label><br>
+            <label><input type="radio" name="q8" value="b"> A situation where there is insufficient stock to meet demand</label><br>
+            <label><input type="radio" name="q8" value="c"> A situation where inventory is valued incorrectly</label><br>
+        </div>
+
+        <div class="question">
+            <p>What is the main difference between direct and indirect costs in cost accounting?</p>
+            <label><input type="radio" name="q9" value="a"> Direct costs can be traced directly to a product; indirect costs cannot</label><br>
+            <label><input type="radio" name="q9" value="b"> Indirect costs are only fixed; direct costs are variable</label><br>
+            <label><input type="radio" name="q9" value="c"> Indirect costs are always higher than direct costs</label><br>
+        </div>
+
+        <div class="question">
+            <p>In inventory management, what is "reorder point"?</p>
+            <label><input type="radio" name="q10" value="a"> The minimum stock level at which new inventory should be ordered</label><br>
+            <label><input type="radio" name="q10" value="b"> The point at which inventory reaches its maximum level</label><br>
+            <label><input type="radio" name="q10" value="c"> The time it takes to replenish inventory</label><br>
+        </div>
+
+        <button id="submitBtn" style="display:none;">Submit</button>
+        <button id="retakeQuizBtn" style="display:none;" onclick="retakeQuiz()">Retake Quiz</button>
+    </div>
+
+    <div id="result" style="display:none;">
+        <p id="score"></p>
+    </div>
+</div>
+
+<script>
+    const startQuizBtn = document.getElementById('startQuizBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const resultDiv = document.getElementById('result');
+    const scoreText = document.getElementById('score');
+    const questions = document.querySelectorAll('.question');
+    const retakeQuizBtn = document.getElementById('retakeQuizBtn');
+
+    const correctAnswers = {
+        q1: 'a',
+        q2: 'a',
+        q3: 'a',
+        q4: 'b',
+        q5: 'c',
+        q6: 'b',
+        q7: 'b',
+        q8: 'b',
+        q9: 'a',
+        q10: 'a'
+    };
+
+    let score = 0;
+
+    startQuizBtn.addEventListener('click', () => {
+        startQuizBtn.style.display = 'none';
+        questions.forEach(question => question.style.display = 'block');
+        submitBtn.style.display = 'inline-block';
+    });
+
+    submitBtn.addEventListener('click', () => {
+        score = 0;
+        questions.forEach(question => {
+            const selectedAnswer = question.querySelector('input:checked');
+            const questionName = question.querySelector('input').name;
+            if (selectedAnswer && selectedAnswer.value === correctAnswers[questionName]) {
+                score++;
+            }
+        });
+        scoreText.textContent = `You got ${score} out of 10`;
+        resultDiv.style.display = 'block';
+        submitBtn.style.display = 'none';
+        retakeQuizBtn.style.display = 'inline-block';
+    });
+
+    function retakeQuiz() {
+        resultDiv.style.display = 'none';
+        questions.forEach(question => {
+            question.querySelector('input').checked = false;
+        });
+        score = 0;
+        submitBtn.style.display = 'inline-block';
+        retakeQuizBtn.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
